@@ -2,23 +2,18 @@ name: diene_e2e
 # pana scores a description outside 60-180 characters as an INVALID pubspec, so
 # this wording is kept inside that window deliberately.
 description: >-
-  L-dart family version train and consumer test harness: bundles member test
-  helpers and ships journey drivers, stub servers, and the shared C0 app-handoff
-  fixture.
-version: 0.0.0
+  L-dart family version train and consumer test harness: bundles member test helpers and ships journey drivers, stub servers, and the shared C0 app-handoff fixture.
+version: 1.0.0
 repository: https://github.com/AtomiCloud/diene.dart_e2e
 issue_tracker: https://github.com/AtomiCloud/diene.dart_e2e/issues
 homepage: https://github.com/AtomiCloud/diene.dart_e2e
-
 topics:
   - testing
   - e2e
   - test-helper
   - fixtures
   - atomicloud
-
 resolution: workspace
-
 # This package depends on the Flutter SDK, transitively and unavoidably, because
 # the version train it exists to publish includes diene_auth_engine and
 # diene_api_engine — both of which declare `flutter: '>=3.24.0'`. The same
@@ -26,7 +21,6 @@ resolution: workspace
 environment:
   sdk: '>=3.12.0 <4.0.0'
   flutter: '>=3.24.0'
-
 # THE VERSION TRAIN. This is the node's primary deliverable: a consumer
 # (flutter-base's E4 swap-in) depends on THIS package and gets a coherent set of
 # all seven L-dart members at once, instead of pinning each individually.
@@ -60,7 +54,6 @@ dependencies:
   diene_result: ^1.0.0
   flutter:
     sdk: flutter
-
 dev_dependencies:
   dart_code_linter: ^4.1.8
   # `flutter_test` REPLACES the `test` dev_dependency the pure-Dart siblings
